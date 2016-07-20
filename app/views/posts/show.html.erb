@@ -2,7 +2,7 @@
    <h1 class="title"> 
         <%= @post.title %>
    </h1>
-
+   <br>
     <p class="date">
         Submitted <%= time_ago_in_words(@post.created_at) %> Ago
         <% if user_signed_in? %> 
@@ -10,9 +10,12 @@
         | <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
     </p>
+    <br>
+    <hr>
     <p class="body">
         <%= @post.body %>
     </p>
+    <hr>
     <div id="share_box">
         <p>Share our post</p>
         <a href=""><i class="fa fa-google-plus"></i></a>
