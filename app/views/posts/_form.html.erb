@@ -9,6 +9,12 @@
         </ul>
     </div>
 <% end %>
+    <div class="field form-group">
+      <%= f.label :image %><br>
+    
+    
+      <%= f.file_field :image, :class => 'form-control' %>
+    </div>
     <p>
         <%= f.label :title %><br>
         <%= f.text_field :title %>
@@ -18,8 +24,4 @@
         <%= f.label :body %><br>
         <%= f.text_area :body %>
     </p>
-
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+  
